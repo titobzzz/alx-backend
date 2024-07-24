@@ -1,18 +1,6 @@
 #!/usr/bin/env python3
 """Create a class MRUCache that inherits
 from BaseCaching and is a caching system:
-
-You must use self.cache_data - dictionary
-from the parent class BaseCaching
-You can overload def __init__(self): but don’t
-forget to call the parent init: super().__init__()
-def put(self, key, item):
-Must assign to the dictionary self.cache_data the
-item value for the key key.
-If key or item is None, this method should not do anything.
-If the number of items in self.cache_data is higher
-that BaseCaching.MAX_ITEMS:
-you must discard the
 """
 
 
@@ -24,13 +12,13 @@ class MRUCache(BaseCaching):
     """
 
     def __init__(self):
-        """_summary_
+        """_summaaaaary
         """
         super().__init__()
         self.usedKeys = []
 
     def put(self, key, item):
-        """_args
+        """_args...cdc()
         """
         if key is not None and item is not None:
             self.cache_data[key] = item
@@ -45,7 +33,7 @@ class MRUCache(BaseCaching):
                 print('DISCARD: {:s}'.format(discard))
 
     def get(self, key):
-        """Args
+        """Args.....()
         """
         if key is not None and key in self.cache_data.keys():
             self.usedKeys.append(self.usedKeys.pop(self.usedKeys.index(key)))

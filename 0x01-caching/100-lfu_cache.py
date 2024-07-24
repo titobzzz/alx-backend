@@ -6,12 +6,12 @@ from base_caching import BaseCaching
 
 class LFUCache(BaseCaching):
     """
-    FIFOCache defines a FIFO caching system
+    Cache fifop ooo
     """
 
     def __init__(self):
         """
-        Initialize the class with the parent's init method
+        Initializethe-class with parent's init
         """
         super().__init__()
         self.usage = []
@@ -19,7 +19,7 @@ class LFUCache(BaseCaching):
 
     def put(self, key, item):
         """
-        Cache a key-value pair
+        Cacheakey-valuepair
         """
         if key is None or item is None:
             pass
@@ -56,7 +56,7 @@ class LFUCache(BaseCaching):
 
     def get(self, key):
         """
-        Return the value linked to a given key, or None
+        returnthe valuelinked to given key, or None
         """
         if key is not None and key in self.cache_data.keys():
             del self.usage[self.usage.index(key)]
