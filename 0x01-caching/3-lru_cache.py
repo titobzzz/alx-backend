@@ -8,8 +8,8 @@ you must print DISCARD: with the key discarded
 and following by a new line
 def get(self, key):
 Must return the value in self.cache_data linked to key.
-You must use self.cache_data - dictionary from the parent class BaseCaching
-You can overload def __init__(self): but don’t forget to call the parent init: super().__init__()
+You must use self.cache_data - dictionary from the parent class
+You can overload def __init__(self): but don’t call the paret
 def put(self, key, item):
 Must assign to the dictionary self.cache_data the item value for the key key.
 If key or item is None, this method should not do anything.
@@ -20,7 +20,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class LRUCache(BaseCaching):
-    """If the number of items in self.cache_data is higher that BaseCaching.MAX_ITEMS:
+    """If the number of items in self.cache_data is higher that
 you must discard the least recently used item (LRU algorithm)
 you must print DISCARD: with the key discarded and following by a new line
 def get(self, key):
