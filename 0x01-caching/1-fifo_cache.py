@@ -22,7 +22,6 @@ class FIFOCache(BaseCaching):
     def put(self, key, item):
         """ Args:
                         key (_type_): _description_
-                        item (_type_): _description_
         """
         if key is None or item is None:
             pass
